@@ -1,0 +1,46 @@
+﻿@model  webUygulamasi.Models.Siniflar.AracKategori
+@{
+    ViewBag.Title = "UpdataCategory";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Kategori Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("CategoryUpdata", "AracKategori", FormMethod.Post)) {
+
+
+<div class="form-group">
+
+
+    @Html.LabelFor(x => x.AracAD, "Aracın Adını Giriniz")
+    @Html.TextBoxFor(x => x.AracAD, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.AracİD)
+    <br />
+
+    @Html.LabelFor(x => x.AracMARKA, "Aracın Markasını  Giriniz")
+    @Html.TextBoxFor(x => x.AracMARKA, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.AracİD)
+
+    @Html.LabelFor(x => x.AracPLAKA, "Aracın Plakasını Giriniz")
+    @Html.TextBoxFor(x => x.AracPLAKA, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.AracİD)
+
+    @Html.LabelFor(x => x.AracTESLİMTARİHİ, "Aracın Teslim Tarihini Giriniz")
+    @Html.TextBoxFor(x => x.AracTESLİMTARİHİ, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.AracİD)
+
+    @Html.LabelFor(x => x.AracYİKAMAUCRET, "Aracın Yıkama Ücretini Giriniz")
+    @Html.TextBoxFor(x => x.AracYİKAMAUCRET, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.AracİD)
+
+</div>
+
+
+
+<button class="btn btn-warning">Araç Bilgilerini Güncelle </button>
+
+}
+

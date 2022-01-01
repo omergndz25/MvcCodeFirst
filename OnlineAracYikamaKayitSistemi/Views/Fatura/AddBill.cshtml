@@ -1,0 +1,51 @@
+﻿@model  webUygulamasi.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "AddBill";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+
+<h2> Yeni Fatura Ekleme Sayfası</h2>
+<br />
+
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.FaturaSIRANO, "Fatura Seri Numarasını Giriniz")
+    @Html.TextBoxFor(x => x.FaturaSIRANO, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FaturaTARİH, "Fatura Tarihini  Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTARİH, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.VergiDAİRESİ, "Faturanın Kesildiği Vergi Dairesini Giriniz")
+    @Html.TextBoxFor(x => x.VergiDAİRESİ, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.FaturaSAAT, "Faturanın Saatini  Giriniz")
+    @Html.TextBoxFor(x => x.FaturaSAAT, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.FaturaTESLİMEDEN, "Faturayı Teslim Eden Kişinin Adını Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTESLİMEDEN, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.FaturaTESLİMALAN, "Faturayı Teslim Alan Kişiyi Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTESLİMALAN, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.FaturaTESLİMALAN, "Faturanın Toplam Tutarını Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTESLİMALAN, new { @class = "form-control" })
+
+
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+
+    <br />
+
+
+    <button class="btn btn-info">Bilgileri Kaydet </button>
+
+</form>

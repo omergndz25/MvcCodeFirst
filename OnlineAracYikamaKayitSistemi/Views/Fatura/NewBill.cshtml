@@ -1,0 +1,69 @@
+﻿@using webUygulamasi.Models.Siniflar
+@model List<Faturalar>
+@{
+    ViewBag.Title = "NewBill";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+
+     
+
+        <th>FATURA SIRANO</th>
+        <th>FATURA TARİH</th>
+        <th>FATURA VERGİ DAİRESİ</th>
+        <th>FATURA SAATİ</th>
+        <th>FATURA TESLİM EDEN KİŞİ</th>
+        <th>FATURA TESLİM ALAN KİŞİ</th>
+        <th> FATURA TOPLAMI </th>
+       
+        <th>FATURA BİLGİSİ GÜNCELLE</th>
+    </tr>
+
+    @foreach (var c in Model)
+    {
+
+<tr>
+   
+
+    <td>
+        @c.FaturaSIRANO
+    </td>
+    <td>
+   
+        @c.FaturaTARİH
+    </td>
+    <td>
+
+        @c.VergiDAİRESİ
+    </td>
+    <td>
+        @c.FaturaSAAT
+
+    </td>
+    <td>
+        @c.FaturaTESLİMEDEN
+
+
+    </td>
+
+    <td>
+        @c.FaturaTESLİMALAN
+
+    </td>
+    <td>
+        @c.FaturaTOPLAM
+
+    </td>
+
+
+    <td> <a href="/Fatura/BringInvoice/@c.FaturaID" class="btn btn-warning">Güncelle </a></td>
+
+</tr>
+    }
+</table>
+
+<a href="/Fatura/AddBill" class="btn btn-primary">Yeni Fatura Ekle</a>
+

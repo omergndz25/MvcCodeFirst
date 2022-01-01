@@ -1,0 +1,57 @@
+﻿@model webUygulamasi.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "BringInvoice";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Fatura Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("InvoiceUpdate", "Fatura", FormMethod.Post))
+{
+
+
+<div class="form-group">
+
+
+
+    @Html.LabelFor(x => x.FaturaSIRANO, "Faturanın Sıra Numarasını Giriniz")
+    @Html.TextBoxFor(x => x.FaturaSIRANO, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+    <br />
+
+    @Html.LabelFor(x => x.FaturaTARİH, "Faturanın Tarihini  Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTARİH, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+
+    @Html.LabelFor(x => x.VergiDAİRESİ, "Faturanın Kesildiği Vergi Dairesini Giriniz")
+    @Html.TextBoxFor(x => x.VergiDAİRESİ, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+
+    @Html.LabelFor(x => x.FaturaSAAT, "Faturanın Kesildiği Saati Giriniz")
+    @Html.TextBoxFor(x => x.FaturaSAAT, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+
+    @Html.LabelFor(x => x.FaturaTESLİMEDEN, "Faturayı Teslim Eden Kişiyi Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTESLİMEDEN, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+
+    @Html.LabelFor(x => x.FaturaTESLİMALAN, "Faturayı Teslim Alan Kişiyi Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTESLİMALAN, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+
+    @Html.LabelFor(x => x.FaturaTOPLAM, "Faturanın Toplam Ücretini Giriniz")
+    @Html.TextBoxFor(x => x.FaturaTOPLAM, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.FaturaID)
+
+</div>
+
+
+
+    <button class="btn btn-warning">Fatura Bilgilerini Güncelle </button>
+
+}
+
+

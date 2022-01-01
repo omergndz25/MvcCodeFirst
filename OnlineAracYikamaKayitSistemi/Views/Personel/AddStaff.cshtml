@@ -1,0 +1,56 @@
+﻿@model webUygulamasi.Models.Siniflar.Personel
+@{
+    ViewBag.Title = "AddStaff";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<br />
+
+<h2> Yeni Personel Ekleme Sayfası</h2>
+<br />
+
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.PersonelAD, "Personelin Adını Giriniz")
+    @Html.TextBoxFor(x => x.PersonelAD, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PersonelSOYAD, "Personelin Soyadını  Giriniz")
+    @Html.TextBoxFor(x => x.PersonelSOYAD, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.PersonelTELEFON, "Personelin Telefon Numarasını Giriniz")
+    @Html.TextBoxFor(x => x.PersonelTELEFON, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.PersonelADRES, "Personelin Adres Bilgilerini  Giriniz")
+    @Html.TextBoxFor(x => x.PersonelADRES, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.PersonelGİRİSTARİHİ, "Personelin İşe Başlangıç Tarihini Giriniz")
+    @Html.TextBoxFor(x => x.PersonelGİRİSTARİHİ, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.PersonelUCRET, "Personelin Aldığı Ücreti Giriniz")
+    @Html.TextBoxFor(x => x.PersonelUCRET, new { @class = "form-control" })
+
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+
+    <br />
+
+
+    <button class="btn btn-info" id="Btn1">Bilgileri Kaydet </button>
+    
+    <script>
+        $('#Btn1').click(function () {
+            alert("Personel Başarıyla Eklenmiştir")
+        });
+
+
+    </script>
+</form>
+
+

@@ -1,0 +1,46 @@
+﻿@model  webUygulamasi.Models.Siniflar.Musteri
+@{
+    ViewBag.Title = "BringCustomer";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<br />
+
+<h2> Müşteri Güncelleme Ekranı</h2>
+<br />
+
+@using (Html.BeginForm("AddCustomer", "Musteri", FormMethod.Post)) { 
+
+<div class="form-group">
+    @Html.LabelFor(x => x.MusteriAD, "Aracın Adını Giriniz")
+    @Html.TextBoxFor(x => x.MusteriAD, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.MusteriID)
+    @Html.ValidationMessageFor(x => x.MusteriAD, "", new { @style = "color:red" })
+    <br />
+
+    @Html.LabelFor(x => x.MusteriSOYAD, "Aracın Markasını  Giriniz")
+    @Html.TextBoxFor(x => x.MusteriSOYAD, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.MusteriID)
+    @Html.ValidationMessageFor(x => x.MusteriSOYAD, "", new { @style = "color:red" })
+
+    @Html.LabelFor(x => x.MusteriTELEFON, "Aracın Plakasını Giriniz")
+    @Html.TextBoxFor(x => x.MusteriTELEFON, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.MusteriID)
+
+    @Html.LabelFor(x => x.MusteriTELEFON, "Aracın Teslim Tarihini Giriniz")
+    @Html.TextBoxFor(x => x.MusteriTELEFON, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.MusteriID)
+
+    @Html.LabelFor(x => x.MusteriMAİL, "Aracın Yıkama Ücretini Giriniz")
+    @Html.TextBoxFor(x => x.MusteriMAİL, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.MusteriID)
+    @Html.ValidationMessageFor(x => x.MusteriMAİL, "", new { @style = "color:red" })
+
+    @Html.LabelFor(x => x.MusteriARACTESLİMTARİHİ, "Aracın Yıkama Ücretini Giriniz")
+    @Html.TextBoxFor(x => x.MusteriARACTESLİMTARİHİ, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.MusteriID)
+    <br />
+    <button class="btn btn-default" style="background-color:yellowgreen">Müşteri Bilgilerini Güncelle </button>
+</div>
+}

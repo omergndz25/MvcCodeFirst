@@ -1,0 +1,64 @@
+﻿@using webUygulamasi.Models.Siniflar
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<AracKategori>
+@{
+    ViewBag.Title = "AdminPage";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+
+<table class="table table-bordered">
+    <tr>
+
+
+        <th>ARAÇ ADI</th>
+        <th>ARAÇ MARKASI</th>
+        <th>ARAÇ PLAKASI</th>
+        <th>ARAÇ TESLİM TARİHİ</th>
+        <th>ARAÇ YIKAMA ÜCRETİ</th>
+        <th>ARAÇ BİLGİSİ SİL</th>
+        <th>ARAÇ BİLGİSİ GÜNCELLE</th>
+    </tr>
+
+    @foreach (var c in Model)
+    {
+
+        <tr>
+
+            <td>
+                @c.AracAD
+
+            </td>
+            <td>
+                @c.AracMARKA
+            </td>
+            <td>
+                @c.AracPLAKA
+
+            </td>
+            <td>
+                @c.AracTESLİMTARİHİ
+            </td>
+            <td>
+                @c.AracYİKAMAUCRET
+
+            </td>
+
+
+            <td> <a href="/AracKategori/RemoveCategory/@c.AracİD" class="btn btn-danger">Sil </a></td>
+            <td> <a href="/AracKategori/UpdataCategory/@c.AracİD" class="btn btn-success">Güncelle </a></td>
+        </tr>
+    }
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("AdminPage", new { page }),new PagedListRenderOptions
+{
+    LiElementClasses=new List<string>
+    { "page-link"}
+})
+
+
+<a href="/AracKategori/AddCategory" class="btn btn-primary" style="float:right;">Yeni Araç Ekle</a>
+

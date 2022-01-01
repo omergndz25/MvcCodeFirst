@@ -1,0 +1,58 @@
+﻿@using webUygulamasi.Models.Siniflar
+@model List<Musteri>
+@{
+    ViewBag.Title = "CustomerDetail";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<br />
+<h2>Müşteri Detay Sayfası</h2>
+<br />
+
+<div style="background-color:darkgray">
+
+
+
+
+</div>
+
+<br />
+
+<table class="table table-hover">
+
+
+    <tr>
+      
+        <th>PERSONEL İLETİŞİM NUMARASI</th>
+        <th>PERSONEL MAİL BİLGİSİ</th>
+        <th>PERSONEL ARAÇ TESLİM TARİHİ</th>
+
+    </tr>
+
+    @foreach (var c in Model)
+    {
+
+        <tr>
+            
+            <td>
+                @c.MusteriTELEFON
+
+            </td>
+            <td>
+                @c.MusteriMAİL
+
+            </td>
+
+
+            <td>
+                @c.MusteriARACTESLİMTARİHİ
+            </td>
+         
+
+        </tr>
+    }
+
+</table>
+<a href="/Musteri/CustomerPage/" class="btn btn-info"> Tüm Müşteri Görüntüle</a>
+

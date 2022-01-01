@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Statistic";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<br />
+<h2>İstatistik Bilgileri </h2>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Custom Theme files -->
+
+    <link href="~/Sablonlar/web2/css/style.css" rel="stylesheet" />
+
+    <!-- Custom Theme files -->
+
+    <script src="~/Sablonlar/web2/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/web2/css/font-awesome.css">
+
+
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Metro Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <script src="js/zingchart.min.js"></script>
+
+    <script src="js/zingchart.jquery.js"></script>
+    <script src="~/Sablonlar/web2/js/jquery.easydropdown.js"></script>
+
+    <script src="~/Sablonlar/web2/js/jquery.nicescroll.js"></script>
+
+
+
+
+    <link href="~/Sablonlar/web2/css/jqvmap.css" rel="stylesheet" />
+
+
+    <script src="~/Sablonlar/web2/js/easyResponsiveTabs.js"></script>
+    <link href="~/Sablonlar/web2/css/nav.css" rel="stylesheet" />
+
+    <script src="~/Sablonlar/web2/js/main.js"></script>
+
+    <!-- chart -->
+    <script src="~/Sablonlar/web2/js/Chart1.js"></script>
+    <!-- //chart -->
+</head>
+<body>
+   
+   
+    
+ 
+    <div class="list_of_members">
+        <div class="sales" style="background-color:brown">
+           
+            <div class="icon-text">
+                <h3>@ViewBag.v1</h3>
+                <p>Temizlenen Araç </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="new-users">
+          
+            <div class="icon-text">
+                <h3>@ViewBag.v2</h3>
+                <p>Toplam Müşteri</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="orders">
+          
+            <div class="icon-text">
+                <h3>@ViewBag.v3</h3>
+                <p>Toplam Personel</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="visitors">
+           
+            <div class="icon-text">
+                <h3>@ViewBag.v4</h3>
+                <p>Toplam Gelir</p>
+            </div>
+         
+        </div>
+       
+   
+   
+          
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
